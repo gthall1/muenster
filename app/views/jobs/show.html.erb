@@ -1,0 +1,13 @@
+
+<h1><%= @job.title %></h1>
+<h3><%= @job.company.name %></h3>
+<p><%= @job.company.location %></p>
+<p><%= @job.description %></p>
+
+
+
+<%= link_to 'Back to All Jobs', jobs_path %>
+
+<%= link_to 'Back to Company', company_path(@job.company) %>
+
+

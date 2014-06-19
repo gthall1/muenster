@@ -1,0 +1,31 @@
+<h1>Create new company listing</h1>
+
+<%= form_for @new_company do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+  </div>
+  <div>
+    <%= f.label :location %>
+    <%= f.text_field :location %></br>
+  </div>
+  <div>
+    <%= f.label :industry %>
+    <%= f.text_field :industry %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %><br>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
+
+
+
+
+
+
+
+
