@@ -20,6 +20,21 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def edit
+    #Only to set up the form, NOT related to #update
+    @company = Company.find(params[:id])
+  end
+
+  def update
+    @company = Company.find(params[:id])
+
+    if @company.update_attributes(company_params)
+      redirect_to company_path(@company)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def company_params
