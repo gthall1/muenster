@@ -1,5 +1,5 @@
 Muenster::Application.routes.draw do
-  resources :jobs, only: [:index, :show, :new, :create]
+  resources :jobs, only: [:index, :show, :new, :create, :edit, :update]
   resources :companies, only: [:index, :show, :new, :create, :edit, :update]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
