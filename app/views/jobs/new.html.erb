@@ -1,0 +1,17 @@
+<h1>Create New Job Listing</h1>
+
+<%= form_for @new_job do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %><br>
+  </div>
+  <div>
+    <%= f.collection_select :company_id, Company.all, :id, :name %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
