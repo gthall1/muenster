@@ -1,0 +1,7 @@
+<h2>Search Results</h2>
+
+<ul>
+  <% @jobs.each do |job| %>
+    <li><%= link_to job.title, job_path(job) %></li>
+  <% end %>
+</ul>

@@ -39,6 +39,11 @@ class JobsController < ApplicationController
     redirect_to jobs_path
   end
 
+  def search
+    @jobs = Job.search(params[:search])
+    render :search
+  end
+
   private
 
   def job_params
